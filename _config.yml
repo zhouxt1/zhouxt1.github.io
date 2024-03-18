@@ -24,7 +24,7 @@ sidebar:
     link: https://github.com/zhouxt1
   - name: CV
     icon: <i class="fa-solid fa-paperclip"></i>
-    link: ./cv.pdf
+    link: ./assets/Xiaotian_Zhou___CV.pdf
 
 # https://github.com/github/pages-gem/issues/399#issuecomment-301827749
 # When running locally, we run into the following error —
