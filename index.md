@@ -11,5 +11,5 @@ I am interested in Computer Security and Programming Languages. I am part of Sys
 
 ## Interests and Tools
 * Formal Verification, Program Analysis
-* Coq, Lean, F-Star, Frama-C
-* Type Theory, HoTT, Hoare Logic
+* Coq, F-Star, Frama-C
+* Type Theory, Hoare Logic
