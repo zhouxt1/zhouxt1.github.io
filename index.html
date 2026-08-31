@@ -1,0 +1,162 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Xiaotian Zhou</title>
+<meta name="description" content="Xiaotian Zhou — PhD candidate in Computer Science and Engineering at Penn State, working on verified parsers, program analysis, and systems security.">
+<link rel="canonical" href="https://zhouxt1.github.io/">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://zhouxt1.github.io/">
+<meta property="og:title" content="Xiaotian Zhou">
+<meta property="og:description" content="PhD candidate in Computer Science and Engineering at Penn State. Verified parsers, program analysis, systems security.">
+<meta property="og:image" content="https://zhouxt1.github.io/assets/img/profile.jpg">
+<meta name="twitter:card" content="summary">
+<link rel="icon" type="image/svg+xml" href="/assets/img/favicon.svg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;500;600&family=Newsreader:opsz,wght@6..72,300..600&display=swap">
+<link rel="stylesheet" href="/assets/css/site.css">
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<div class="wrap">
+
+  <header class="masthead">
+    <div>
+      <h1>Xiaotian Zhou</h1>
+      <p class="role"><strong>PhD Candidate</strong>, Computer Science and Engineering &middot;
+        Pennsylvania State University</p>
+      <nav class="links" style="margin-top:0">
+        <a href="mailto:xzz5503@psu.edu">Email</a>
+        <a href="https://github.com/zhouxt1">GitHub</a>
+        <a href="https://arxiv.org/abs/2608.09094">arXiv</a>
+        <a href="/assets/Xiaotian_Zhou___CV.pdf">CV&nbsp;(PDF)</a>
+      </nav>
+    </div>
+    <img class="portrait" src="/assets/img/profile.jpg" width="540" height="720"
+         alt="Portrait of Xiaotian Zhou">
+  </header>
+
+  <main id="main">
+
+    <section>
+      <h2 class="label">About me</h2>
+      <div class="about">
+        <p>I am a PhD Candidate in <a href="https://www.eecs.psu.edu">Computer Science and
+          Engineering</a> at Pennsylvania State University. Prior to joining Penn State, I obtained my
+          B.E. in Computer Science and Technology at ShanghaiTech University.</p>
+        <p>I am interested in Computer Security and Programming Languages. Specifically, I work on
+          verified software systems (parsers), bug finding methods (fuzzing, differential testing) and
+          Undefined Behaviors in &lsquo;safe&rsquo; programming languages like Rust.
+          I am advised by <a href="https://syed-rafiul-hussain.github.io/">Dr. Syed Hussain</a> and
+          <a href="https://www.cse.psu.edu/~gxt29/">Dr. Gary G. Tan</a>.</p>
+      </div>
+    </section>
+
+    <section>
+      <h2 class="label">Publications</h2>
+      <a class="feature" href="/vuper/">
+        <canvas id="strip" aria-hidden="true"></canvas>
+        <div class="feature-body">
+          <div class="badges">
+            <span class="badge">ACM CCS 2026</span>
+            <span class="badge plain">arXiv:2608.09094</span>
+          </div>
+          <h3>VUPER: Verified ASN.1 UPER Parser</h3>
+          <p class="authors"><strong>Xiaotian Zhou</strong>, Kai Tu, Ali Ranjbar, Yilu Dong,
+            Gang Tan, Syed Rafiul Hussain</p>
+          <p class="gist">A framework for generating verified ASN.1 UPER parsers, plus a differential
+            testing harness that uses the verified parser as its oracle. It uncovered 20 types of
+            inconsistency across 11 open-source and commercial parsers on 5G and V2X protocols,
+            with working attacks.</p>
+          <span class="cta">Read the paper <span class="arw">&rarr;</span></span>
+        </div>
+      </a>
+    </section>
+
+    <!-- TODO: confirm job title, exact dates, team, and add a one-line summary of the work. -->
+    <section>
+      <h2 class="label">Experience</h2>
+      <div class="stack">
+        <div class="item">
+          <h3>Research Intern &mdash; Seagate Technology</h3>
+          <p class="meta">Summer 2026</p>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <h2 class="label">Research</h2>
+      <div class="stack">
+        <div class="item">
+          <h3>Verified parsers for binary protocols</h3>
+          <p class="meta">Rocq Prover &middot; OCaml &middot; 2023&ndash;present</p>
+          <p>Bit-precise parser correctness, round-trip consistency between parsers and serializers,
+            and a compiler that turns an ASN.1 specification directly into a verified parser. See
+            <a href="/vuper/">VUPER</a>.</p>
+        </div>
+        <div class="item">
+          <h3>Undefined behavior in &ldquo;safe&rdquo; languages</h3>
+          <p class="meta">Rust &middot; Verus</p>
+          <p>Safety guarantees stop at the <code>unsafe</code> boundary, and in practice that boundary
+            leaks. I study how undefined behavior reaches supposedly safe Rust, and what it takes to
+            state and discharge the obligations that keep it out.</p>
+        </div>
+        <div class="item">
+          <h3>Bug finding for protocol implementations</h3>
+          <p class="meta">Fuzzing &middot; Differential testing</p>
+          <p>Verification tells you an implementation matches a specification. Differential testing
+            tells you which of several implementations is lying. A verified reference implementation
+            makes a very good oracle for the second.</p>
+        </div>
+        <div class="item">
+          <h3>Adversarial attacks on audio spoofing countermeasures</h3>
+          <p class="meta">ShanghaiTech &middot; Undergraduate thesis &middot; 2022&ndash;2023</p>
+          <p>Adversarial attacks against countermeasure models protecting automatic speaker
+            verification, advised by Prof. Fu Song.</p>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <h2 class="label">News</h2>
+      <ul class="rows">
+        <li><span class="when">Aug 2026</span><span>VUPER preprint posted to arXiv as
+          <a href="https://arxiv.org/abs/2608.09094">arXiv:2608.09094</a>.</span></li>
+        <li><span class="when">Jun 2026</span><span>VUPER accepted to <strong>CCS</strong>.</span></li>
+        <li><span class="when">Dec 2025</span><span>Passed the Comprehensive Exam in Computer Science
+          and Engineering at Penn State.</span></li>
+        <li><span class="when">May 2025</span><span>Received my Master&rsquo;s degree at Penn State.</span></li>
+      </ul>
+    </section>
+
+    <section>
+      <h2 class="label">Education</h2>
+      <ul class="rows">
+        <li><span class="when">2023&ndash;</span><span>PhD, Computer Science and Engineering &mdash;
+          Pennsylvania State University</span></li>
+        <li><span class="when">2025</span><span>MS, Computer Science and Engineering &mdash;
+          Pennsylvania State University</span></li>
+        <li><span class="when">2021&ndash;22</span><span>Visiting student &mdash;
+          University of California, Berkeley</span></li>
+        <li><span class="when">2019&ndash;23</span><span>BE, Computer Science and Technology &mdash;
+          ShanghaiTech University</span></li>
+      </ul>
+    </section>
+
+    <section>
+      <h2 class="label">Teaching</h2>
+      <ul class="rows">
+        <li><span class="when">2020&ndash;23</span><span>Teaching Assistant, Mathematical Analysis
+          I &amp; II &mdash; ShanghaiTech University</span></li>
+      </ul>
+    </section>
+
+  </main>
+
+  <footer>Xiaotian Zhou &middot; xzz5503@psu.edu &middot; Penn State</footer>
+</div>
+<script src="/assets/js/bitstream.js" defer></script>
+</body>
+</html>
