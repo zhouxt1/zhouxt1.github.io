@@ -12,7 +12,7 @@
     ['OCTET STRING',16],['INTEGER(0..15)',4],['OPTIONAL',1],['CONSTRAINED',5],
     ['EXTENSION',1],['INTEGER(0..63)',6]
   ];
-  var MONO = '"IBM Plex Mono",monospace';
+  var MONO = '"Red Hat Mono",ui-monospace,monospace';
 
   function hash(n){
     var x=(n^0x9E3779B9)>>>0;
@@ -46,9 +46,9 @@
     ctx.globalAlpha=o.alpha;
 
     if(o.detail){
-      ctx.strokeStyle='rgba(79,209,197,.13)'; ctx.lineWidth=1;
+      ctx.strokeStyle='rgba(79,209,197,.26)'; ctx.lineWidth=1;
       ctx.font='400 '+Math.max(8,cw*0.36).toFixed(1)+'px '+MONO;
-      ctx.textAlign='center'; ctx.textBaseline='alphabetic'; ctx.fillStyle='#3A4E55';
+      ctx.textAlign='center'; ctx.textBaseline='alphabetic'; ctx.fillStyle='#6A8189';
       for(var b=Math.ceil(b0/8)*8;b<=b1;b+=8){
         var xt=xOf(b); if(xt<-40||xt>W+40) continue;
         ctx.beginPath(); ctx.moveTo(Math.round(xt)+.5,rowY-30);
@@ -61,8 +61,8 @@
         var x0=xOf(fl.start), x1=xOf(Math.min(fl.start+fl.w,off));
         if(x1<-60||x0>W+60) continue;
         var col=fl.straddle?'240,168,104':'79,209,197';
-        ctx.fillStyle='rgba('+col+',.07)'; ctx.fillRect(x0,rowY-19,x1-x0,38);
-        ctx.strokeStyle='rgba('+col+',.5)'; ctx.lineWidth=1;
+        ctx.fillStyle='rgba('+col+',.12)'; ctx.fillRect(x0,rowY-19,x1-x0,38);
+        ctx.strokeStyle='rgba('+col+',.72)'; ctx.lineWidth=1;
         ctx.beginPath();
         ctx.moveTo(x0+.5,rowY+19); ctx.lineTo(x0+.5,rowY+25);
         ctx.lineTo(x1-.5,rowY+25); ctx.lineTo(x1-.5,rowY+19); ctx.stroke();
@@ -70,7 +70,7 @@
           var age=Math.min(1,(off-(fl.start+fl.w))/2.2);
           ctx.globalAlpha=o.alpha*age;
           ctx.font='400 '+Math.max(8.5,cw*0.38).toFixed(1)+'px '+MONO;
-          ctx.fillStyle=fl.straddle?'#F0A868':'#5FB8AE';
+          ctx.fillStyle=fl.straddle?'#F5BE87':'#7FD8CE';
           ctx.textAlign='center'; ctx.textBaseline='top';
           ctx.fillText(fl.name,(x0+x1)/2,rowY+31);
           ctx.globalAlpha=o.alpha;
@@ -87,7 +87,7 @@
         while(fi<s.fields.length && s.fields[fi].start+s.fields[fi].w<=i) fi++;
         var cur=s.fields[fi];
         ctx.fillStyle=(cur&&cur.straddle)?'#F0A868':'#4FD1C5';
-      } else ctx.fillStyle='#33454C';
+      } else ctx.fillStyle='#5A7178';
       ctx.fillText(s.bit(i)?'1':'0',x+cw/2,rowY);
     }
 
@@ -104,8 +104,8 @@
 
   function fadeEdges(ctx,W,H){
     var g=ctx.createLinearGradient(0,0,W,0);
-    g.addColorStop(0,'rgba(0,0,0,1)'); g.addColorStop(.08,'rgba(0,0,0,0)');
-    g.addColorStop(.92,'rgba(0,0,0,0)'); g.addColorStop(1,'rgba(0,0,0,1)');
+    g.addColorStop(0,'rgba(0,0,0,1)'); g.addColorStop(.035,'rgba(0,0,0,0)');
+    g.addColorStop(.965,'rgba(0,0,0,0)'); g.addColorStop(1,'rgba(0,0,0,1)');
     ctx.globalCompositeOperation='destination-out';
     ctx.fillStyle=g; ctx.fillRect(0,0,W,H);
     ctx.globalCompositeOperation='source-over';
@@ -123,9 +123,9 @@
   function initBackground(canvas){
     var ctx=canvas.getContext('2d');
     var tracks=[
-      {s:new Stream(1),yf:.20,cwf:1.00,sp:1.00,a:.46},
-      {s:new Stream(2),yf:.50,cwf:1.16,sp:0.68,a:.34},
-      {s:new Stream(3),yf:.80,cwf:0.88,sp:1.34,a:.42}
+      {s:new Stream(1),yf:.20,cwf:1.00,sp:1.00,a:.82},
+      {s:new Stream(2),yf:.50,cwf:1.16,sp:0.68,a:.62},
+      {s:new Stream(3),yf:.80,cwf:0.88,sp:1.34,a:.76}
     ];
     var W=0,H=0,cell=24,head=0,off=0,boost=0,last=0,raf=0;
 

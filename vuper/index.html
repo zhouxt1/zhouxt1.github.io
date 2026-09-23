@@ -23,56 +23,26 @@
 <meta name="citation_arxiv_id" content="2608.09094">
 <meta name="citation_pdf_url" content="https://arxiv.org/pdf/2608.09094">
 <link rel="icon" type="image/svg+xml" href="/assets/img/favicon.svg">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;500;600&family=Newsreader:opsz,wght@6..72,300..600&display=swap">
 <link rel="stylesheet" href="/assets/css/site.css">
 </head>
 <body class="paper">
-<canvas id="bg" aria-hidden="true"></canvas>
-<div id="scrim"></div>
+<header class="band"><div class="in">
+  <a class="back" href="/">&larr; Xiaotian Zhou</a>
+  <p class="venue">ACM CCS 2026</p>
+  <h1>VUPER: Verified ASN.1 UPER Parser</h1>
+  <p class="authors"><strong>Xiaotian Zhou</strong>, Kai Tu, Ali Ranjbar, Yilu Dong, Gang Tan, Syed Rafiul Hussain</p>
+  <nav class="icons" aria-label="Paper links" style="margin-top:1.1em">
+    <a href="https://arxiv.org/abs/2608.09094">arXiv</a>
+    <a href="https://arxiv.org/pdf/2608.09094">PDF</a>
+    <a href="https://github.com/SyNSec-den/VUPER">Code</a>
+    <a href="#bibtex">BibTeX</a>
+  </nav>
+</div></header>
 
-<main>
-<div class="wrap">
-  <a class="back" href="/"><span class="arw">&larr;</span> Xiaotian Zhou</a>
-
-  <header class="rise" style="animation-delay:.05s">
-    <h1>VUPER: Verified ASN.1 UPER Parser</h1>
-    <p class="authors"><strong>Xiaotian Zhou</strong>, Kai Tu, Ali Ranjbar, Yilu Dong,
-      Gang Tan, Syed Rafiul Hussain</p>
-    <p class="venue">To appear at ACM CCS 2026 &middot; arXiv:2608.09094 [cs.CR, cs.PL]
-      &middot; Pennsylvania State University</p>
-    <nav class="links" style="margin-bottom:clamp(40px,6vw,60px)">
-      <a href="https://arxiv.org/abs/2608.09094">arXiv</a>
-      <a href="https://arxiv.org/pdf/2608.09094">PDF</a>
-      <a href="#bibtex">BibTeX</a>
-    </nav>
-  </header>
-
-  <section class="rise" style="animation-delay:.16s">
-    <h2 class="label">What it found</h2>
-    <div class="stats">
-      <div class="stat">
-        <div class="n">20</div>
-        <p class="k">types of inconsistency uncovered</p>
-        <p class="sub">with working attacks</p>
-      </div>
-      <div class="stat">
-        <div class="n">11</div>
-        <p class="k">ASN.1 parsers tested</p>
-        <p class="sub">7 open&#8209;source &middot; 4 commercial</p>
-      </div>
-      <div class="stat">
-        <div class="n">2</div>
-        <p class="k">protocol families exercised</p>
-        <p class="sub">5G &middot; V2X</p>
-      </div>
-    </div>
-  </section>
-
-  <section class="rise" style="animation-delay:.26s">
-    <h2 class="label">Abstract</h2>
-    <p class="abstract">ASN.1 is a widely used interface description language, and UPER (Unaligned
+<main class="wrap">
+  <section class="card">
+    <h2>Abstract</h2>
+    <p>ASN.1 is a widely used interface description language, and UPER (Unaligned
       Packed Encoding Rules) is one of its key encoding rules, particularly popular in
       security-critical domains such as cellular networks and vehicle-to-everything (V2X)
       communication. To ensure the correctness and security of this foundational infrastructure, we
@@ -89,46 +59,20 @@
       exploiting these parser vulnerabilities.</p>
   </section>
 
-  <section class="rise" style="animation-delay:.34s">
-    <h2 class="label">How it works</h2>
-    <ol class="how">
-      <li><span class="n">01</span><span>Formalize a <strong>bit-precise</strong> parser and the
-        round-trip consistency properties relating a parser to its serializer, including ASN.1
-        backward and forward compatibility.</span></li>
-      <li><span class="n">02</span><span>Implement and verify parser and serializer
-        <strong>combinators</strong> for ASN.1 basic types and structures, against the UPER
-        specification.</span></li>
-      <li><span class="n">03</span><span>Compile ASN.1 definitions directly into
-        <strong>verified parsers</strong>.</span></li>
-      <li><span class="n">04</span><span>Use the verified parser as a <strong>test oracle</strong>
-        in a dynamic differential-testing framework against real implementations.</span></li>
-    </ol>
-  </section>
-
-  <section class="rise" style="animation-delay:.42s">
-    <h2 class="label">Reading the background</h2>
-    <div class="keyplate">
-      <div>UPER packs fields without padding them to byte boundaries.</div>
-      <div><span class="sw cy"></span>field contained within one byte</div>
-      <div><span class="sw am"></span>field straddling a byte boundary</div>
-    </div>
-  </section>
-
-  <section class="rise" style="animation-delay:.5s" id="bibtex">
-    <h2 class="label">BibTeX</h2>
-    <pre class="bib">@inproceedings{zhou2026vuper,
+  <section class="card" id="bibtex">
+    <h2>BibTeX</h2>
+    <div class="code"><pre class="bib">@inproceedings{zhou2026vuper,
   title     = {VUPER: Verified ASN.1 UPER Parser},
   author    = {Zhou, Xiaotian and Tu, Kai and Ranjbar, Ali and
                Dong, Yilu and Tan, Gang and Hussain, Syed Rafiul},
   booktitle = {Proceedings of the 2026 ACM SIGSAC Conference on
                Computer and Communications Security (CCS)},
   year      = {2026}
-}</pre>
+}</pre></div>
   </section>
-
-  <footer>Xiaotian Zhou &middot; xzz5503@psu.edu</footer>
-</div>
 </main>
-<script src="/assets/js/bitstream.js" defer></script>
+
+<footer>&copy; 2026 Xiaotian Zhou</footer>
+<script src="/assets/js/site.js" defer></script>
 </body>
 </html>
